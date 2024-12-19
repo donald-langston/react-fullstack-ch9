@@ -49,6 +49,7 @@ export function Signup() {
       <br />
       <input
         type='submit'
+        name='submit'
         value={signUpMutation.isPending ? 'Signing up...' : 'Sign Up'}
         disabled={!username || !password || signUpMutation.isPending}
       />
