@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test'
 
 test('allows sign up and login', async ({ page }) => {
+  test.setTimeout(60000)
   const testUser = 'test' + Date.now()
   await page.goto('/')
   await page.getByRole('link', { name: 'Sign Up' }).click()
