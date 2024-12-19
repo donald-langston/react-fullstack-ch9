@@ -3,8 +3,9 @@ import { test, expect } from '@playwright/test'
 test('allows sign up and login', async ({ page }) => {
   //.setTimeout(60000)
   const testUser = 'test' + Date.now()
-  await page.goto('/')
+  await page.goto('./')
   console.log(testUser)
+  console.log(page.url())
   expect(page).toHaveURL('http:localhost:5173')
   /*  await page.getByRole('link', { name: 'Sign Up' }).click()
   await page.getByLabel('Username:').click()
