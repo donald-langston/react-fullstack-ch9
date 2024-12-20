@@ -1,7 +1,6 @@
 import { test, expect } from './fixtures/index.js'
 
 test('allows creating a new post', async ({ page, auth }) => {
-  test.setTimeout(60000)
   const testUser = await auth.signUpAndLogin()
   await page.getByLabel('Title:').click()
   await page.getByLabel('Title:').fill('Test Post')
