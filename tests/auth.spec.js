@@ -7,7 +7,7 @@ test('allows sign up and login', async ({ page }) => {
   console.log(testUser)
   console.log(page.url())
   //expect(page).toHaveURL('http:localhost:5173')
-  await page.getByRole('link', { name: 'Sign Up' }).click()
+  await page.getByRole('link', { name: 'Sign Up' }).press('Enter')
   await page.getByLabel('Username:').press('Enter')
   await page.getByLabel('Username:').fill(testUser)
   await page.getByLabel('Password:').press('Enter')
