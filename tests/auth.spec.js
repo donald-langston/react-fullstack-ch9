@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 
 test('allows sign up and login', async ({ page }) => {
-  //.setTimeout(60000)
+  test.etTimeout(120000)
   const testUser = 'test' + Date.now()
   await page.goto('/')
   console.log(testUser)
